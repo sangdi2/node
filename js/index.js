@@ -1,0 +1,11 @@
+const zsh =require('../zsh-tools/index')
+const time =zsh.dateFormat(new Date())
+console.log(time)
+console.log('-------------')
+const htmlstr='<span>hhh</span>'
+const html =zsh.htmlescape(htmlstr)
+console.log(html)
+console.log('-------------')
+const unhtml =zsh.htmlunescape(html)
+console.log(unhtml)
+console.log('-------------')
