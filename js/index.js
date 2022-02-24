@@ -1,4 +1,4 @@
-const zsh =require('../zsh-tools/index')
+const zsh =require('../sangdi-tools/index')
 const time =zsh.dateFormat(new Date())
 console.log(time)
 console.log('-------------')
