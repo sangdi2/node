@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>后台主页</title>
+  <script src="./jquery.js"></script>
+</head>
+
+<body>
+  <h1>首页</h1>
+
+  <button id="btnLogout">退出登录</button>
+
+  <script>
+    $(function(){
+      $.get('/pages/index',function(res){
+        if(res.status==0){
+           alert('您还未登录')
+           location.href='./login.html'
+        }else {
+          alert('欢迎您！'+res.username)
+        }
+      })
+    })
+    $("#btnLogout").on('click',function(){
+         $.get('/pages/loginout',function(res){
+           if(res.status==0){
+             alert('您已退出登录')
+           }else {
+             return alert('退出登录失败')
+           }
+         })
+    })
+  </script>
+</body>
+
+</html>
