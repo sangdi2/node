@@ -1,0 +1,165 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h1 id="mysql-windows-">MySQL 在 Windows 系统下的安装</h1>
+<ol>
+<li><p>双击 <code>mysql-installer-community-8.0.19.0.msi</code>，启动 MySQL 安装程序。</p>
+</li>
+<li><p>如果弹框提示如下的警告信息，证明你的电脑需要安装额外的 <code>.NET Framework</code> 依赖包。此时，先退出 MySQL 的安装程序，然后双击 <code>NDP452-KB2901907-x86-x64-AllOS-ENU.exe</code>，启动 <code>.NET Framework 4.5.2</code> 的安装程序。</p>
+<p><img src="./imgs/0.jpg" alt=""></p>
+</li>
+<li><p>重新启动 MySQL 的安装程序，看到如下界面：</p>
+<p><img src="./imgs/1.jpg" alt=""></p>
+</li>
+<li><p>进入如下界面：</p>
+<p><img src="./imgs/2.jpg" alt=""></p>
+</li>
+<li><p>正在安装依赖项：</p>
+<p><img src="./imgs/3.jpg" alt=""></p>
+<p><img src="./imgs/4.jpg" alt=""></p>
+<p><img src="./imgs/5.jpg" alt=""></p>
+<p><img src="./imgs/6.jpg" alt=""></p>
+<p><img src="./imgs/7.jpg" alt=""></p>
+<p><img src="./imgs/9.jpg" alt=""></p>
+<p><img src="./imgs/10.jpg" alt=""></p>
+</li>
+<li><p>完成依赖项的安装：</p>
+<p><img src="./imgs/11.jpg" alt=""></p>
+<p>此时，会弹出如下警告窗，直接点击 Yes 即可：</p>
+<p><img src="./imgs/12.jpg" alt=""></p>
+</li>
+<li><p>进入 MySQL 的安装页面：</p>
+<p><img src="./imgs/14.jpg" alt=""></p>
+<p><img src="./imgs/15.jpg" alt=""></p>
+</li>
+<li><p>完成 MySQL 功能项的安装：</p>
+<p><img src="./imgs/16.jpg" alt=""></p>
+</li>
+<li><p>配置 MySQL：</p>
+<p><img src="./imgs/17.jpg" alt=""></p>
+</li>
+<li><p>选择 MySQL 数据库的运行模式：</p>
+<p><img src="./imgs/18.jpg" alt=""></p>
+</li>
+<li><p>设置网络模式：</p>
+<p><img src="./imgs/19.jpg" alt=""></p>
+</li>
+<li><p>配置身份认证方式：</p>
+<p><img src="./imgs/20.jpg" alt=""></p>
+</li>
+<li><p>将 MySQL 的默认 root 用户密码，设置为 admin123</p>
+<p><img src="./imgs/21.jpg" alt=""></p>
+</li>
+<li><p>将 MySQL 配置为 Windows 的服务：</p>
+<p><img src="./imgs/22.jpg" alt=""></p>
+</li>
+<li><p>保存刚才对 MySQL 配置的修改：</p>
+<p><img src="./imgs/23.jpg" alt=""></p>
+<p><img src="./imgs/24.jpg" alt=""></p>
+<p><img src="./imgs/25.jpg" alt=""></p>
+</li>
+<li><p>继续完成后续的配置流程：</p>
+<p><img src="./imgs/26.jpg" alt=""></p>
+<p><img src="./imgs/27.jpg" alt=""></p>
+</li>
+<li><p>最后一个配置项：</p>
+<p><img src="./imgs/28.jpg" alt=""></p>
+<p>测试能否正常连接到刚才安装的 MySQL 数据库：</p>
+<p><img src="./imgs/29.jpg" alt=""></p>
+</li>
+<li><p>保存刚才的配置：</p>
+<p><img src="./imgs/30.jpg" alt=""></p>
+<p><img src="./imgs/31.jpg" alt=""></p>
+<p><img src="./imgs/32.jpg" alt=""></p>
+<p><img src="./imgs/33.jpg" alt=""></p>
+</li>
+<li><p>完成 MySQL 的安装与配置：</p>
+<p><img src="./imgs/34.jpg" alt=""></p>
+</li>
+</ol>
+
+          	</article>
+        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>

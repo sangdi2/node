@@ -3,6 +3,7 @@ const express =require('express')
 
 
 const app =express()
+// 路由
 
 app.get('/',function(req,res){
     throw new Error('发生了错误')
